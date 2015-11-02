@@ -21,13 +21,13 @@ end
 
 % ------------------ EXECUTAR AO ABRIR O JOGO ----------------------------
 function Menu_OpeningFcn(hObject, eventdata, handles, varargin)
-img = imread('menu.jpg');
+img = imread('resources\menu.jpg');
 axes(handles.imagem)
 image(img)
 handles.output = hObject;
 guidata(hObject, handles);
 global y Fs;
-[y, Fs] = audioread('botao.wav');
+[y, Fs] = audioread('resources\botao.wav');
 
 %-------------------------------------------------------------------------
 
